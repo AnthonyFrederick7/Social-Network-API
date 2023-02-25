@@ -1,0 +1,13 @@
+{
+    "name": "social-network-api",
+    "main": "server.js",
+    "scripts": {
+      "start": "node server.js",
+      "seed": "node utils/seed"
+    },
+    "dependencies": {
+      "express": "^4.18.1",
+      "moment": "^2.29.3",
+      "mongoose": "^6.3.4"
+    }
+  }
