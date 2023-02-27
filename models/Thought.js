@@ -20,7 +20,7 @@ const reactionSchema = new Schema(
         createdAt: {
             type: Date,
             default: Date.now,
-            get: (timeStamp) => dateFormat(timeStamp),
+            get: createdAt => dayjs(createdAt).format('DD/MM/YYYY'),
         }
     },
     {
@@ -43,7 +43,7 @@ const thoughtSchema = new Schema(
         createdAt: {
             type: Date,
             default: Date.now,
-            get: (timeStamp) => dateFormat(timeStamp),
+            get: createdAt => dayjs(createdAt).format('DD/MM/YYYY'),
         },
         username: {
             type: String,

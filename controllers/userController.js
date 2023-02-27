@@ -1,6 +1,6 @@
 const User = require('../models/User');
 
-module.exports = {
+const userController = {
   // Creates a new user
   createUser(req, res) {
     User.create(req.body)
@@ -83,3 +83,5 @@ module.exports = {
         .catch((err) => res.status(500).json(err));
     },
 }
+
+module.exports = userController;

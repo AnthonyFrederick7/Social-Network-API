@@ -1,6 +1,6 @@
 const { Thought, User } = require('../models');
 
-module.exports = {
+const thoughtController = {
   // Creates a thought
   createThought(req, res) {
     Thought.create(req.body)
@@ -102,3 +102,5 @@ module.exports = {
       .catch((err) => res.status(500).json(err));
   },
 };
+
+module.exports = thoughtController;
